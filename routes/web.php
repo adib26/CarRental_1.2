@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {return view('index');});
-Route::get('/xz', function () {return view('index');})->name('xz');
+Route::get('/home', function () {return view('index');})->name('home');
 
 
 
@@ -29,4 +29,4 @@ Route::get('/logout', function ()
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/userhome', 'HomeController@index')->name('userhome');
