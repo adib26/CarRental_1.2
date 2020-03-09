@@ -19,7 +19,7 @@
       <nav class="nav-menu float-right d-none d-lg-block">
         <ul>
           <li class="active"><a href="{{ route('home') }}">Home</a></li>
-          <li><a href="services.html">Our Services</a></li>
+          <li><a href="{{ route('services') }}">Our Services</a></li>
               <li class="drop-down"><a>Login/Register</a>
                 <ul>
                   <li><a href="{{ route('login') }}">Login</a></li>
@@ -28,7 +28,7 @@
               </li>
 
 
-          <li><a href="">About Us</a></li>
+          <li><a href="{{ route('aboutus') }}">About Us</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -44,6 +44,9 @@
         <div class="carousel-container">
           <h2 class="animated fadeInDown" style="font-size: 32px">Are you looking for cheap Car rental deals in Egypt?<br>Search right here!</h2>
           <p class="animated fadeInUp">Where you Can Rent Your Dream Car from indviduals</p>
+          <br>
+          <br>
+          <h4 style="color: #fff" class="animated fadeInUp">Just Login or Register to start using our amazing services !!</h4>
         </div>
       </div>
 
@@ -52,6 +55,10 @@
         <div class="carousel-container">
           <h2 class="animated fadeInDown" style="font-size: 32px">Do you want to make some money from your Car?</h2>
           <p class="animated fadeInUp">you Can rent Your Car Here without any Charge from Us!!</p>
+                    <br>
+          <br>
+          <h4 style="color: #fff" class="animated fadeInUp">Just Login or Register to start using our amazing services !!</h4>
+
         </div>
       </div>
 
@@ -60,6 +67,10 @@
         <div class="carousel-container">
           <h2 class="animated fadeInDown" style="font-size: 32px">Do You Want to buy A Brand New Car?</h2>
           <p class="animated fadeInUp">We Have A great Collection of Cars with the Best price in the Country!!</p>
+                    <br>
+          <br>
+          <h4 style="color: #fff" class="animated fadeInUp">Just Login or Register to start using our amazing services !!</h4>
+
         </div>
       </div>
 
@@ -85,7 +96,7 @@
         <div class="row">
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
             <div class="icon-box icon-box-pink">
-              <div class="icon"><img src="assets/img/sm_1.png"></div>
+              <div class="icon"><img src="assets/img/sm_1.png" alt=""></div>
               <h4 class="title">No Charge</h4>
               <p class="description">Rent Any Car you want without paying anything in our site</p>
             </div>
@@ -120,13 +131,10 @@
       </div>
     </section><!-- End Services Section -->
 
+ 
 
-    <!-- ======= Features Section ======= -->
-    <section class="features">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Features</h2>
+        
+<!--
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
@@ -180,28 +188,13 @@
           </div>
         </div>
 
-        <div class="row" data-aos="fade-up">
-          <div class="col-md-5 order-1 order-md-2">
-            <img src="assets/img/features-4.svg" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-7 pt-5 order-2 order-md-1">
-            <h3>Quas et necessitatibus eaque impedit ipsum animi consequatur incidunt in</h3>
-            <p class="font-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
-          </div>
-        </div>
 
       </div>
-    </section><!-- End Features Section -->
+    </section> End Features Section 
+  -->
 
-  </main><!-- End #main -->
+
+  </main>
 
   <!-- ======= Footer ======= -->
   <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
@@ -215,8 +208,8 @@
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="{{ route('home') }}">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>              
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('services') }}">Services</a></li>              
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('aboutus') }}">About us</a></li>
             </ul>
           </div>
 
