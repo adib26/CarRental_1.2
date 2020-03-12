@@ -95,8 +95,8 @@
 					</div>
 
 					
-						<a class="txt2" href="{{url('')}}">
-							Go Back
+						<a class="txt2" href="{{ route('home') }}">
+							Home
 							<i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i>
 						</a>
 				</form>

@@ -20,9 +20,10 @@
         <ul>
           <li class="active"><a href="{{ route('home') }}">Home</a></li>
           <li><a href="{{ route('services') }}">Our Services</a></li>
+          
               <li class="drop-down"><a>Login/Register</a>
                 <ul>
-                  <li><a href="{{ route('login') }}">Login</a></li>
+                  <li><a href="{{ route('loginn') }}">Login</a></li>
                   <li><a href="{{ route('register') }}">Register</a></li>
                 </ul>
               </li>
@@ -43,7 +44,7 @@
       <div class="carousel-item active">
         <div class="carousel-container">
           <h2 class="animated fadeInDown" style="font-size: 32px">Are you looking for cheap Car rental deals in Egypt?<br>Search right here!</h2>
-          <p class="animated fadeInUp">Where you Can Rent Your Dream Car from indviduals</p>
+          <p class="animated fadeInUp">Where you Can Rent Your Dream Car from us</p>
           <br>
           <br>
           <h4 style="color: #fff" class="animated fadeInUp">Just Login or Register to start using our amazing services !!</h4>
@@ -53,17 +54,14 @@
       <!-- Slide 2 -->
       <div class="carousel-item">
         <div class="carousel-container">
-          <h2 class="animated fadeInDown" style="font-size: 32px">Do you want to make some money from your Car?</h2>
-          <p class="animated fadeInUp">you Can rent Your Car Here without any Charge from Us!!</p>
-                    <br>
+          <h2 class="animated fadeInDown" style="font-size: 32px">Find your dream car and start driving it!!<br></h2>
+          <br>
           <br>
           <h4 style="color: #fff" class="animated fadeInUp">Just Login or Register to start using our amazing services !!</h4>
-
         </div>
       </div>
-
       <!-- Slide 3 -->
-      <div class="carousel-item">
+<!--       <div class="carousel-item">
         <div class="carousel-container">
           <h2 class="animated fadeInDown" style="font-size: 32px">Do You Want to buy A Brand New Car?</h2>
           <p class="animated fadeInUp">We Have A great Collection of Cars with the Best price in the Country!!</p>
@@ -73,7 +71,7 @@
 
         </div>
       </div>
-
+ -->
       <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
@@ -94,19 +92,19 @@
       <div class="container">
 
         <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="icon-box icon-box-pink">
-              <div class="icon"><img src="assets/img/sm_1.png" alt=""></div>
-              <h4 class="title">No Charge</h4>
-              <p class="description">Rent Any Car you want without paying anything in our site</p>
+              <div class="icon"><img src="assets/img/sm_1.png" alt="ch_img"></div>
+              <h4 class="title">No Extra Charge</h4>
+              <p class="description">Rent Any Car you want without paying any extra charge in our site</p>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="icon-box icon-box-cyan">
               <div class="icon"><i class="bx bx-file"></i></div>
-              <h4 class="title"><a href="">Buy brand new Cars</a></h4>
-              <p class="description">buy new Cars With Full warranty and insurance from our Site</p>
+              <h4 class="title"><a href="">Full Insurance</a></h4>
+              <p class="description">rent Cars With Full warranty and insurance from our Site</p>
             </div>
           </div>
 
@@ -213,14 +211,14 @@
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
+<!--           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Rent A Car</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Rent Your Car</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Buy A New Car</a></li>
             </ul>
-          </div>
+          </div> -->
 
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4>Contact Us</h4>

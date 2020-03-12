@@ -21,7 +21,7 @@
           <li class="active"><a href="{{ route('services') }}">Our Services</a></li>
               <li class="drop-down"><a>Login/Register</a>
                 <ul>
-                  <li><a href="{{ route('login') }}">Login</a></li>
+                  <li><a href="{{ route('loginn') }}">Login</a></li>
                   <li><a href="{{ route('register') }}">Register</a></li>
                 </ul>
               </li>
@@ -52,16 +52,13 @@
             <img src="assets/img/bac_2.jpg" class="img-fluid" alt="car" style="height: 280px">
           </div>
           <div class="col-md-7 pt-4">
-            <h3>Rent your car</h3>
+            <h3>Rent your Dream car</h3>
             <p class="font-italic">
-              you can offer your car to be rented on our site.
-              you should specify the period which you allow your car to be rented at and your location.
-              the price per day.
-
+              you can rent your dream car without paying Thousands of dollar on buying a new one
             </p>
             <ul>
-              <li><i class="icofont-check"></i> rent your car to earn money when you are not using it</li>
-              <li><i class="icofont-check"></i> you will have full insurance on your car during the renting time</li>
+              <li><i class="icofont-check"></i>just enter our sity and register in it</li>
+              <li><i class="icofont-check"></i>by entering your username ,email,password and your phone number</li>
             </ul>
           </div>
         </div>
@@ -71,13 +68,13 @@
             <img src="assets/img/jeep_2.jpg" class="img-fluid" alt="jeep car" style="height: 280px">
           </div>
           <div class="col-md-7 pt-5 order-2 order-md-1">
-            <h3>Buy A Brand New Car from us</h3>
+            <h3>Our prices are the best in the country</h3>
         
             <p>
-              you can buy brand new cars from us with the best prices in the region 
+              we offer a big collection of cars with great prices
             </p>
             <ul>
-              <li><i class="icofont-check"></i>ou could Installment the money up to 5 years.</li>
+              <li><i class="icofont-check"></i>you could buy with your credit card.</li>
               <li><i class="icofont-check"></i>deliver to any place in egypt.</li>
             </ul>
 
@@ -89,10 +86,11 @@
             <img src="assets/img/bac_1.png" class="img-fluid" alt="car" style="height: 280px">
           </div>
           <div class="col-md-7 pt-5">
-            <h3>Rent a Car</h3>
+            <h3>Deliver to any place in Egypt</h3>
          
             <ul>
-              <li><i class="icofont-check"></i>rent any car you want in any time from other renters on our site.</li>
+              <li><i class="icofont-check"></i>our services are avilable all across egypt</li>
+              <li><i class="icofont-check"></i>rent any car you want in any time from our site.</li>
             </ul>
           </div>
         </div>

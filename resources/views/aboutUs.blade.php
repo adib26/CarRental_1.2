@@ -20,7 +20,7 @@
           <li><a href="{{ route('services') }}">Our Services</a></li>
               <li class="drop-down"><a>Login/Register</a>
                 <ul>
-                  <li><a href="{{ route('login') }}">Login</a></li>
+                  <li><a href="{{ route('loginn') }}">Login</a></li>
                   <li><a href="{{ route('register') }}">Register</a></li>
                 </ul>
               </li>
@@ -49,6 +49,7 @@
             <h3>Worked on this Project</h3>
             <br><br>
             <ul style="font-family: fantasy;">
+              <li><i></i>Saeed Mohamed</li>
               <li><i></i>Adib Wageeh</li>
               <li><i></i>Ahmed Ashraf</li>
               <li><i></i>Nagy Mostafa</li>
@@ -67,7 +68,7 @@
 
 
     <!-- ======= Our Skills Section ======= -->
-    <section class="skills" data-aos="fade-up">
+    <section class="skills">
       <div class="container">
 
         <div class="section-title">
@@ -158,14 +159,7 @@
       <div class="copyright">
         &copy; Copyright <strong><span>Adib</span></strong>. All Rights Reserved
       </div>
-      <!-- <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/ -->
-
-<!--         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
- -->      
+   
 </div> 
     </div>
   </footer><!-- End Footer -->
@@ -191,3 +185,5 @@
 </body>
 
 </html>
+
+@endsection

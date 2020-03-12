@@ -17,6 +17,11 @@ Route::get('/', function () {return view('index');});
 Route::get('/home', function () {return view('index');})->name('home');
 Route::get('/services', function () {return view('services');})->name('services');
 Route::get('/aboutus', function () {return view('aboutUs');})->name('aboutus');
+Route::get('/loginn', function () {return view('login');})->name('loginn');
+//Route::get('/main', 'MainController@index');
+Route::post('/checklogin', 'MainController@checklogin');
+Route::get('/successlogin', 'MainController@successlogin');
+//Route::get('main/logout', 'MainController@logout');
 
 
 
@@ -32,4 +37,4 @@ Route::get('/logout', function ()
 
 Auth::routes();
 
-Route::get('/userhome', 'HomeController@index')->name('userhome');
+Route::get('/userhome', function () {return view('userhome');})->name('userhome');
