@@ -17,6 +17,7 @@ Route::get('/', function () {return view('index');});
 Route::get('/home', function () {return view('index');})->name('home');
 Route::get('/services', function () {return view('services');})->name('services');
 Route::get('/aboutus', function () {return view('aboutUs');})->name('aboutus');
+Route::get('/BlockUsers', function () {return view('BlockUsers');})->name('BlockUsers');
 Route::get('/loginn', function () {return view('login');})->name('loginn');
 //Route::get('/main', 'MainController@index');
 Route::post('/checklogin', 'MainController@checklogin');

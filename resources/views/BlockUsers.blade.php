@@ -1,6 +1,6 @@
 @extends('layouts.siteST')
 
-@section('title','About us')
+@section('title','Block user')
 
 @section('body')
 
@@ -34,83 +34,27 @@
     </div>
   </header><!-- End Header -->
 
-  <main id="main">
 
 
 
-    <!-- ======= About Section ======= -->
-    <section class="about" data-aos="fade-up">
-      <div class="container">
+  <main class="container" style="height:530px;width:800px;margin-top:40px;background-image:url(assets/img/back.jpg);border-radius:20px">
 
-        <div class="row">
-          <div class="col-lg-6">
-            <img src="assets/img/audi.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <h3>Worked on this Project</h3>
-            <br><br>
-            <ul style="font-family: fantasy;">
-              <li><i></i>Saeed Mohamed</li>
-              <li><i></i>Adib Wageeh</li>
-              <li><i></i>Ahmed Ashraf</li>
-              <li><i></i>Nagy Mostafa</li>
-              <li><i></i>Mina Youseef</li>
-              <li><i></i>Mina Foly</li>
-            </ul>
-            <p>
-
-            </p>
-          </div>
-        </div>
-
+      <div>
+         <label class="UserName" style="color:white;margin-top:100px;margin-left:230px;font-size:25px">User name</label>
+         <input type="text" class="Name"
+         style="border:1px solid;border-left:2px solid;border-right:2px solid;border-top:2px solid;margin-left:10px;height:25px">
       </div>
-    </section><!-- End About Section -->
 
-
-
-    <!-- ======= Our Skills Section ======= -->
-    <section class="skills">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Our Skills</h2>
-         
-        </div>
-
-        <div class="skills-content">
-
-          <div class="progress">
-            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">HTML <i class="val">100%</i></span>
-            </div>
-          </div>
-
-          <div class="progress">
-            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">CSS <i class="val">90%</i></span>
-            </div>
-          </div>
-
-          <div class="progress">
-            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">JavaScript <i class="val">75%</i></span>
-            </div>
-          </div>
-
-          <div class="progress">
-            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">Photoshop <i class="val">55%</i></span>
-            </div>
-          </div>
-
-        </div>
-
+      <div style="margin-top:60px;margin-left:300px">
+         <button type="button" class="btn btn-primary" style="height:40px;width:100px;margin-bottom:">Block</button>
+         <button type="button" class="btn btn-secondary" style="height:40px;width:100px;margin-left:px">Unblock</button>  
       </div>
-    </section><!-- End Our Skills Section -->
+    
+  </main>
 
 
 
-  </main><!-- End #main -->
+
 
 <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
 
@@ -188,3 +132,43 @@
 </html>
 
 @endsection
+
+
+
+
+
+<!--main id="main">
+
+    <section class="BlockUser" data-aos="fade-up">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6">
+             <img src="assets/img/Car.jpg" class="img-fluid" alt="Responsive image">
+          </div>
+
+          <div class="col-lg-6 pt-4 pt-lg-0 pb-10">
+
+            <form class="form-inline">
+              <div class="form-group mb-4">
+                <label class="wrap-input100 validate-input">User name</label>
+              </div>
+
+              <div class="form-group mx-sm-4 mb-4">
+                <input type="text" class="wrap-input100 validate-input" placeholder="UserName">
+              </div>
+
+            </form>
+            <div>
+             <button type="button" class="btn btn-primary mb-2 ">Block</button>
+             <button type="button" class="btn btn-secondary mb-2">Unblock</button>  
+            </div>
+       
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+      -->

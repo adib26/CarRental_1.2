@@ -20,7 +20,7 @@
         <ul>
           <li class="active"><a href="{{ route('home') }}">Home</a></li>
           <li><a href="{{ route('services') }}">Our Services</a></li>
-          
+          <li><a href="{{ route('BlockUsers') }}">Block user</a></li>
               <li><a href="{{ route('logout') }}">logout</a>
               </li>
 

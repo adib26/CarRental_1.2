@@ -19,6 +19,7 @@
         <ul>
           <li ><a href="{{ route('home') }}">Home</a></li>
           <li class="active"><a href="{{ route('services') }}">Our Services</a></li>
+          <li><a href="{{ route('BlockUsers') }}">Block user</a></li>
               <li class="drop-down"><a>Login/Register</a>
                 <ul>
                   <li><a href="{{ route('loginn') }}">Login</a></li>
