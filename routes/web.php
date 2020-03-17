@@ -13,20 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+// Home....
 Route::get('/', function () {return view('index');});
 Route::get('/home', function () {return view('index');})->name('home');
 Route::get('/services', function () {return view('services');})->name('services');
 Route::get('/aboutus', function () {return view('aboutUs');})->name('aboutus');
-Route::get('/BlockUsers', function () {return view('BlockUsers');})->name('BlockUsers');
+
+
+
+// login....
 Route::get('/loginn', function () {return view('login');})->name('loginn');
-//Route::get('/main', 'MainController@index');
-Route::post('/checklogin', 'MainController@checklogin');
-Route::get('/successlogin', 'MainController@successlogin');
-//Route::get('main/logout', 'MainController@logout');
+Route::post('/checklogin', 'loginController@checklogin');
+Route::get('/successlogin', 'loginController@successlogin');
 
 
 
-
+// logout....
 Route::get('/logout', function ()
 {
     auth()->logout();
@@ -36,6 +39,18 @@ Route::get('/logout', function ()
 })->name('logout');
 
 
-Auth::routes();
 
-Route::get('/userhome', function () {return view('userhome');})->name('userhome');
+
+//Admin....
+Route::get('/BlockUsers', function () {return view('Admin/BlockUsers');})->name('BlockUsers');
+Route::get('/AdminHome', function () {return view('Admin/AdminHome');})->name('AdminHome');
+Route::get('/AddCar', function () {return view('Admin/AddCar');})->name('AddCar');
+
+
+
+
+// User....
+Route::get('/userhome', function () {return view('user/userhome');})->name('userhome');
+
+
+Auth::routes();

@@ -19,7 +19,6 @@
         <ul>
           <li ><a href="{{ route('home') }}">Home</a></li>
           <li class="active"><a href="{{ route('services') }}">Our Services</a></li>
-          <li><a href="{{ route('BlockUsers') }}">Block user</a></li>
               <li class="drop-down"><a>Login/Register</a>
                 <ul>
                   <li><a href="{{ route('loginn') }}">Login</a></li>
@@ -119,14 +118,6 @@
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Rent A Car</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Rent Your Car</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Buy A New Car</a></li>
-            </ul>
-          </div>
 
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4>Contact Us</h4>

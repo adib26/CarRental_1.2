@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Validator;
 use Auth;
-class MainController extends Controller
+class loginController extends Controller
 {
     function index()
     {
@@ -19,15 +19,25 @@ class MainController extends Controller
             'email'   => 'required|email',
             'password'  => 'required|alphaNum|min:3'
         ]);*/
+        Auth::guard();
+
+
 
         $user_data = array(
             'email'  => $request->get('email'),
             'password' => $request->get('password')
         );
 
-        if(Auth::attempt($user_data))
+
+        if($request->get('email') == "admin@gmail.com" && $request->get('password') == '1234' ){
+
+            $request->session()->regenerate();         
+            return redirect('AdminHome');
+        }
+
+        elseif(Auth::attempt($user_data))
         {
-            
+            $request->session()->regenerate();         
             return redirect('successlogin');
         }
         else
@@ -39,13 +49,8 @@ class MainController extends Controller
 
     function successlogin()
     {
-        return view('userhome');
+        return view('user/userhome');
     }
 
-    function logout()
-    {
-        Auth::logout();
-        return redirect('main');
-    }
 
 }

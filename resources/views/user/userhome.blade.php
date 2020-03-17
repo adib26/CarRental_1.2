@@ -18,14 +18,11 @@
 
       <nav class="nav-menu float-right d-none d-lg-block">
         <ul>
-          <li class="active"><a href="{{ route('home') }}">Home</a></li>
-          <li><a href="{{ route('services') }}">Our Services</a></li>
-          <li><a href="{{ route('BlockUsers') }}">Block user</a></li>
-              <li><a href="{{ route('logout') }}">logout</a>
-              </li>
+          <li class="active"><a href="{{ route('userhome') }}">Home</a></li>
+              <li><a href="{{ route('logout') }}">logout</a></li>
+              
 
 
-          <li><a href="{{ route('aboutus') }}">About Us</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 

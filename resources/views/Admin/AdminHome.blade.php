@@ -1,6 +1,6 @@
 @extends('layouts.siteST')
 
-@section('title','Block user')
+@section('title','Home')
 
 @section('body')
 
@@ -16,18 +16,11 @@
 
       <nav class="nav-menu float-right d-none d-lg-block">
         <ul>
-          <li ><a href="{{ route('home') }}">Home</a></li>
-          <li><a href="{{ route('services') }}">Our Services</a></li>
+          <li class="active"><a href="{{ route('AdminHome') }}">Home</a></li>
           <li><a href="{{ route('BlockUsers') }}">Block user</a></li>
-              <li class="drop-down"><a>Login/Register</a>
-                <ul>
-                  <li><a href="{{ route('loginn') }}">Login</a></li>
-                  <li><a href="{{ route('register') }}">Register</a></li>
-                </ul>
-              </li>
+          <li><a href="{{ route('AddCar') }}">Add Car</a></li>
+          <li><a href="{{ route('logout') }}">logout</a></li>
 
-
-          <li class="active"><a href="{{ route('aboutus') }}">About Us</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -37,18 +30,9 @@
 
 
 
-  <main class="container" style="height:530px;width:800px;margin-top:40px;background-image:url(assets/img/back.jpg);border-radius:20px">
+  
 
-      <div>
-         <label class="UserName" style="color:white;margin-top:100px;margin-left:230px;font-size:25px">User name</label>
-         <input type="text" class="Name"
-         style="border:1px solid;border-left:2px solid;border-right:2px solid;border-top:2px solid;margin-left:10px;height:25px">
-      </div>
-
-      <div style="margin-top:60px;margin-left:300px">
-         <button type="button" class="btn btn-primary" style="height:40px;width:100px;margin-bottom:">Block</button>
-         <button type="button" class="btn btn-secondary" style="height:40px;width:100px;margin-left:px">Unblock</button>  
-      </div>
+  
     
   </main>
 
