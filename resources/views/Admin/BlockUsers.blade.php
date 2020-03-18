@@ -30,21 +30,35 @@
 
 
 
-
-  <main class="container" style="height:530px;width:800px;margin-top:40px;background-image:url(assets/img/back.jpg);border-radius:20px">
+<form class="container" style="height:530px;width:800px;margin-top:40px;background-image:url(assets/img/back.jpg);border-radius:20px" method="post" action="{{ url('block') }}">
+  @csrf
 
       <div>
          <label class="UserName" style="color:white;margin-top:100px;margin-left:230px;font-size:25px">User name</label>
-         <input type="text" class="Name"
+         <input type="text" class="username" name="username" 
          style="border:1px solid;border-left:2px solid;border-right:2px solid;border-top:2px solid;margin-left:10px;height:25px">
       </div>
 
       <div style="margin-top:60px;margin-left:300px">
-         <button type="button" class="btn btn-primary" style="height:40px;width:100px;margin-bottom:">Block</button>
-         <button type="button" class="btn btn-secondary" style="height:40px;width:100px;margin-left:px">Unblock</button>  
+         <button class="btn btn-primary" style="height:40px;width:100px;margin-bottom:" name="submit" value="b">Block</button>
+         <button class="btn btn-secondary" style="height:40px;width:100px;margin-left:px" name="submit" value="un">Unblock</button>  
+
+<br><br>
+<div class="wrap-input100" style="color: #fff">
+
+@php
+
+ $message = Session::get('error')
+
+
+@endphp
+{{$message}}
+
+</div>
+
       </div>
     
-  </main>
+  </form>
 
 
 

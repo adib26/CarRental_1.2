@@ -45,6 +45,7 @@ Route::get('/logout', function ()
 Route::get('/BlockUsers', function () {return view('Admin/BlockUsers');})->name('BlockUsers');
 Route::get('/AdminHome', function () {return view('Admin/AdminHome');})->name('AdminHome');
 Route::get('/AddCar', function () {return view('Admin/AddCar');})->name('AddCar');
+Route::post('/block', 'adminController@blockUser');
 
 
 

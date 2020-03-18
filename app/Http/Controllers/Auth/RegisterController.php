@@ -50,7 +50,7 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'Username' => ['required' ,'string' , 'max:100' , 'min:4'],
+            'Username' => ['required' ,'string' , 'max:100' , 'min:4','unique:userdata'],
             'email' => ['required' , 'email' , 'unique:userdata' , 'different:admin@gmail.com' ],
             'pass' => ['required' , 'min:6' ,'confirmed' , 'max:100' , 'different:1234'],
             'phone' => ['required' , 'min:9','max:13'],
@@ -70,6 +70,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['pass']),
             'phone' => $data['phone'],
+            'state' => 0
         ]);
     }
 }
