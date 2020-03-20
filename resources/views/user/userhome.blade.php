@@ -19,6 +19,7 @@
       <nav class="nav-menu float-right d-none d-lg-block">
         <ul>
           <li class="active"><a href="{{ route('userhome') }}">Home</a></li>
+            <li><strong> Hi  </strong> </li>
               <li><a href="{{ route('logout') }}">logout</a></li>
               
 

@@ -64,8 +64,8 @@
                 <br>
                 <!---------------Handling Error-------------------->
                 <div class="wrap-input100">
-                    @if(isset(Auth::user()->email))
-                        <script>window.location="/main/successlogin";</script>
+                    @if(isset(Auth::user()->name))
+
                     @endif
 
 

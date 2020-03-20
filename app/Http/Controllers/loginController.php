@@ -35,10 +35,14 @@ class loginController extends Controller
             return redirect('AdminHome');
         }
 
-        elseif(Auth::attempt($user_data))
+        else if(Auth::attempt($user_data))
         {
-            $request->session()->regenerate();         
-            return redirect('successlogin');
+            if(Auth::user()->state  == 0){
+
+                $request->session()->regenerate();
+                return redirect('successlogin');
+
+            }else{ return back()->with('error', 'you are blocked'); }
         }
         else
         {
@@ -51,6 +55,8 @@ class loginController extends Controller
     {
         return view('user/userhome');
     }
-
+    function username(){
+        return 'username';
+    }
 
 }
