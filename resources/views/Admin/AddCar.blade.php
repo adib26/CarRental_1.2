@@ -54,6 +54,7 @@
         <ul>
           <li ><a href="{{ route('AdminHome') }}">Home</a></li>
           <li><a href="{{ route('BlockUsers') }}">Block user</a></li>
+            <li><a href="{{ route('AvailableCar') }}">Available Car</a></li>
           <li class="active"><a href="{{ route('AddCar') }}">Add Car</a></li>
           <li><a href="{{ route('logout') }}">logout</a></li>
 
@@ -63,21 +64,33 @@
     </div>
   </header><!-- End Header -->
 
-
-
-
-<div class="wrapper" style="background-image: url('images/2.jpg');">
+ @if (count($errors) > 0)
+     <div class="alert alert-danger">
+         <ul>
+             @foreach($errors->all() as $error)
+                 <li>{{ $error }}</li>
+             @endforeach
+         </ul>
+     </div>
+ @endif
+ @if(session('response'))
+      <div class="col-md-8 alert alert-success">
+             {{@session('success')}}
+      </div>
+@endif
+<div class="wrapper"> <!--style="background-image:url('') ;> -->
       <div class="inner">
-        <form action="">
+        <form  class="login100-form validate-form" method="post" action="{{ url('add_car') }}">
+        {{ csrf_field() }}
           <!--  <h3>Offer cars</h3>  -->
   
             <div class="form-wrapper">
               <label for="">Car name</label>
-              <input type="text"name="" class="form-control">
+              <input type="text" name="name" class="form-control">
             </div>
             <div class="form-wrapper">
               <label for="">Car specification</label>
-              <input type="text" name="" class="form-control">
+              <input type="text" name="specification" class="form-control">
           
           </div>
           <div class="form-wrapper">
@@ -90,11 +103,11 @@
             
             <div class="form-wrapper">
               <label for="">Start day</label>
-              <input type="date"name="" class="form-control">
+              <input type="date"name="start" class="form-control">
             </div>
             <div class="form-wrapper">
               <label for="">End day</label>
-              <input type="date" name="" class="form-control">
+              <input type="date" name="end" class="form-control">
             </div>
           
           </div>
@@ -105,13 +118,13 @@
           </div>
         <div class="form-wrapper">
             <label for="">Price per day</label>
-            <input type="text" name="" class="form-control">
+            <input type="text" name="price" class="form-control">
           </div>
         <div class="form-wrapper">
             <label for="">Place for receipt</label>
-            <input type="text" name="" class="form-control">
+            <input type="text" name="place" class="form-control">
           </div>
-        <button>Submit</button>
+        <button >Submit</button>
           
         
           

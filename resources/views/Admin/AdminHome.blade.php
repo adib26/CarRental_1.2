@@ -18,6 +18,7 @@
         <ul>
           <li class="active"><a href="{{ route('AdminHome') }}">Home</a></li>
           <li><a href="{{ route('BlockUsers') }}">Block user</a></li>
+          <li><a href="{{ route('AvailableCar') }}">Available Car</a></li>
           <li><a href="{{ route('AddCar') }}">Add Car</a></li>
           <li><a href="{{ route('logout') }}">logout</a></li>
 
