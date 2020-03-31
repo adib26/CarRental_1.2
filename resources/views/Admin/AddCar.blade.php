@@ -54,7 +54,7 @@
         <ul>
           <li ><a href="{{ route('AdminHome') }}">Home</a></li>
           <li><a href="{{ route('BlockUsers') }}">Block user</a></li>
-            <li><a href="{{ route('AvailableCar') }}">Available Car</a></li>
+            <li><a href="{{ route('AvailableCars') }}">Available Cars</a></li>
           <li class="active"><a href="{{ route('AddCar') }}">Add Car</a></li>
           <li><a href="{{ route('logout') }}">logout</a></li>
 
@@ -64,7 +64,76 @@
     </div>
   </header><!-- End Header -->
 
- @if (count($errors) > 0)
+
+<div class="wrapper"> <!--style="background-image:url('') ;> -->
+      <div class="inner">
+        <form  class="login100-form validate-form" method="post" action="{{ url('add_car') }}" enctype="multipart/form-data">
+        {{ csrf_field() }}
+          <!--  <h3>Offer cars</h3>  -->
+  
+            <div class="form-wrapper">
+              <label for="">Car name</label>
+              <input type="text" name="name" class="form-control" value="{{old('name')}}">
+            </div>
+            <div class="form-wrapper">
+              <label for="">Car specification</label>
+              <input type="text" name="specification" class="form-control" value="{{old('specification')}}">
+          
+          </div>
+
+          <div class="form-wrapper">
+              <label>Location</label>
+              <select name="loc" value="{{old('loc')}}">
+                <option value="Cairo">Cairo</option>
+                <option value="Alexandria">Alexandria</option>
+                <option value="Aswan">Aswan</option>
+                <option value="Giza">Giza</option>
+                <option value="Beheira">Beheira</option>
+                <option value="Dakahlia">Dakahlia</option>
+                <option value="Faiyum">Faiyum</option>
+                <option value="Luxor">Luxor</option>
+                <option value="Minya">Minya</option>
+                <option value="Monufia">Monufia</option>
+                <option value="South Sinai">South Sinai</option>
+
+              </select>
+          
+          </div>
+          
+          <div class="form-wrapper">
+            <label for="">Car photo</label>
+              <input type="file" name="img">
+    
+          </div>
+        
+          <div class="form-group">
+            
+            <div class="form-wrapper">
+              <label for="">Start day</label>
+              <input type="date"name="start" class="form-control" value="{{old('start')}}">
+            </div>
+            <div class="form-wrapper">
+              <label for="">End day</label>
+              <input type="date" name="end" class="form-control" value="{{old('end')}}">
+            </div>
+          
+          </div>
+            <div class="form-group">
+            
+          
+          
+          </div>
+        <div class="form-wrapper">
+            <label for="">Price per day</label>
+            <input type="text" name="price" class="form-control" value="{{old('price')}}">
+          </div>
+        <div class="form-wrapper">
+            <label for="">Place for receipt</label>
+            <input type="text" name="place" class="form-control" value="{{old('place')}}">
+          </div>
+        <button >Submit</button>
+          <br>
+           @if (count($errors) > 0)
      <div class="alert alert-danger">
          <ul>
              @foreach($errors->all() as $error)
@@ -78,54 +147,6 @@
              {{@session('success')}}
       </div>
 @endif
-<div class="wrapper"> <!--style="background-image:url('') ;> -->
-      <div class="inner">
-        <form  class="login100-form validate-form" method="post" action="{{ url('add_car') }}">
-        {{ csrf_field() }}
-          <!--  <h3>Offer cars</h3>  -->
-  
-            <div class="form-wrapper">
-              <label for="">Car name</label>
-              <input type="text" name="name" class="form-control">
-            </div>
-            <div class="form-wrapper">
-              <label for="">Car specification</label>
-              <input type="text" name="specification" class="form-control">
-          
-          </div>
-          <div class="form-wrapper">
-            <label for="">Car photo</label>
-              <input type="file" id="img" name="img" accept="image/*" >
-    
-          </div>
-        
-          <div class="form-group">
-            
-            <div class="form-wrapper">
-              <label for="">Start day</label>
-              <input type="date"name="start" class="form-control">
-            </div>
-            <div class="form-wrapper">
-              <label for="">End day</label>
-              <input type="date" name="end" class="form-control">
-            </div>
-          
-          </div>
-            <div class="form-group">
-            
-          
-          
-          </div>
-        <div class="form-wrapper">
-            <label for="">Price per day</label>
-            <input type="text" name="price" class="form-control">
-          </div>
-        <div class="form-wrapper">
-            <label for="">Place for receipt</label>
-            <input type="text" name="place" class="form-control">
-          </div>
-        <button >Submit</button>
-          
         
           
         </form>

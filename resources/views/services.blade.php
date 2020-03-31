@@ -81,7 +81,7 @@
           </div>
         </div>
 
-        <div class="row" data-aos="fade-up">
+        <div class="row" data-aos="fade-up" style="color: #">
           <div class="col-md-5">
             <img src="assets/img/bac_1.png" class="img-fluid" alt="car" style="height: 280px">
           </div>

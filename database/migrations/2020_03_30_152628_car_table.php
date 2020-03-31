@@ -12,15 +12,14 @@ class CarTable extends Migration
         Schema::create('car_table', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('renter')->nullable();
+            $table->string('renterUsername')->default('');
             $table->string('specification');
             $table->date('start')->nullable();
             $table->date('end')->nullable();
-            $table->string('price');
-            $table->string('place');
+            $table->integer('price');
+            $table->string('carLocation');
+            $table->text('placeOfRecipt');
             $table->boolean('state')->default(false);
-            $table->mediumText('Image')->nullable();
-
         });
     }
 

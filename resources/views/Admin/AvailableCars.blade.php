@@ -1,10 +1,12 @@
 @extends('layouts.siteST')
 
-@section('title','Home')
+@section('title','AvailableCars')
 
 @section('body')
 
-<body background="assets\img\admin_1.jpg">
+
+
+
  <header id="header">
     <div class="container">
 
@@ -18,8 +20,8 @@
         <ul>
           <li class="active"><a href="{{ route('AdminHome') }}">Home</a></li>
           <li><a href="{{ route('BlockUsers') }}">Block user</a></li>
-          <li><a href="{{ route('AvailableCars') }}">Available Cars</a></li>          
-          <li><a href="{{ route('AddCar') }}">Add Car</a></li>
+          <li><a href="{{ route('AvailableCars') }}">Available Cars</a></li>
+          <li><a href="{{ route('AddCar') }}">Add Car</a></li>          
           <li><a href="{{ route('logout') }}">logout</a></li>
 
         </ul>
@@ -29,11 +31,11 @@
   </header><!-- End Header -->
 
 
-
-
-
-  
+    
   </main>
+
+
+
 
 
 

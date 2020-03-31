@@ -94,6 +94,9 @@ class adminController extends Controller
 
 //end of controller
 }
+
+
+
     function add_car(Request $request)
     {
 
@@ -101,20 +104,26 @@ class adminController extends Controller
             'name' => ['required' ,'string' , 'max:100' , 'min:4'],
            // 'renter' => ['required' , 'string' , 'max:100' , 'min:4' ],
             'specification' => ['required'  ,'string' , 'max:100' , 'min:4'],
-            'price' => ['required' ,'string'],
-            'place' => ['required' , 'string' , 'max:100' , 'min:4' ]
+            'price' => ['required' ,'Integer'],
+            'place' => ['required' , 'string' , 'max:100' , 'min:4' ],
+          /*  'img' => 'required|image|mimes:jpeg,png,jpg,svg',*/
+            'start'=> ['required'],
+            'end'=> ['required'],
         ]);
      $car_table = new car_table;
-     $car_table->name = $request->input('name');
+    
         $car_table->name = $request->input('name');
-        $car_table->renter = $request->input('renter');
         $car_table->specification = $request->input('specification');
         $car_table->price = $request->input('price');
-        $car_table->place = $request->input('place');
+        $car_table->placeOfRecipt = $request->input('place');
         $car_table->start = $request->input('start');
         $car_table->end = $request->input('end');
-        $car_table->image = $request->input('img');
+        $car_table->carLocation = $request->input('loc');
         $car_table->save();
+
+        $imageName = time().'.'.$request->img->extension();  
+        $request->img->move(public_path('images'), $imageName);
+
         return redirect('AdminHome')->with('response','add successfully');
 
 
@@ -151,5 +160,9 @@ class adminController extends Controller
         $car_table = DB::select('select * from car_table');
         return view('avaCar',['car_table' => $car_table]);
     }
+
+
+
+
 
 }
