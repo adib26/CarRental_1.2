@@ -52,8 +52,8 @@
         <ul>
           <li class="active"><a href="{{ route('AdminHome') }}">Home</a></li>
           <li><a href="{{ route('BlockUsers') }}">Block user</a></li>
+          <li><a href="{{ route('AvailableCars') }}">Available Cars</a></li> 
           <li><a href="{{ route('AddCar') }}">Add Car</a></li>
-          <li><a href="{{ route('AvailableCars') }}">Available Cars</a></li>          
           <li><a href="{{ route('logout') }}">logout</a></li>
 
         </ul>
@@ -62,42 +62,47 @@
     </div>
   </header><!-- End Header -->
 
+@foreach($car_table as $car)
 
+<!-- @php
+
+$carimg = Storage::url('');
+
+@endphp -->
+
+<div class="w">    
+
+
+    
+    <img src="" alt="Mountains">  
+    
+    <h3>Car Id:{{$car->id}}</h3>
+
+    @if($car->state == 0)
+    <br><br>
+    <h3 >Car State: <h3 style="color: red"> Not Rented</h3> </h3>
+   
+
+    @else
+
+    <br><br>
+    <h3 >Car State: <h3 style="color: green">Rented</h3> </h3>
+    <br><br>
+    <h3>Renter username: {{$car->renterUsername}}</h3>
+
+    @endif
+
+    <button type="button">Remove</button>
+    
+</div>
+
+@endforeach
     
   </main>
 
 
 
-<div class="w">    
 
-
-
-    <img src="" alt="Mountains">
-    
-    <h3>Car id:</h3>
-    <br><br>
-    <h3>Car State:</h3>
-    <br><br>
-    <h3>Renter id:</h3>
-    <button type="button">Remove</button>
-    
-</div>
-
-
-<div class="w">    
-
-
-
-    <img src="" alt="Mountains">
-    
-    <h3>Car id:</h3>
-    <br><br>
-    <h3>Car State:</h3>
-    <br><br>
-    <h3>Renter id:</h3>
-    <button type="button">Remove</button>
-    
-</div>
 
 
 
@@ -148,7 +153,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Adib</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>SW2</span></strong>. All Rights Reserved
       </div>
    
 </div> 

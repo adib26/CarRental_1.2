@@ -92,7 +92,7 @@ class adminController extends Controller
 
 
 
-//end of controller
+//end of block user
 }
 
 
@@ -121,7 +121,8 @@ class adminController extends Controller
         $car_table->carLocation = $request->input('loc');
         $car_table->save();
 
-        $imageName = time().'.'.$request->img->extension();  
+        $row = car_table::where([ ['specification','=',$request->specification ], ['name','=',$request->name]  ])->first();
+        $imageName = $row->id.'.'.$request->img->extension();  
         $request->img->move(public_path('images'), $imageName);
 
         return redirect('AdminHome')->with('response','add successfully');
@@ -158,7 +159,7 @@ class adminController extends Controller
     public function avaCar()
     {
         $car_table = DB::select('select * from car_table');
-        return view('avaCar',['car_table' => $car_table]);
+        return view('Admin/AvailableCars',['car_table' => $car_table]);
     }
 
 

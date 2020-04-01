@@ -27,7 +27,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
+  
   <!-- =======================================================
   * Template Name: Moderna - v2.0.0
   * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
