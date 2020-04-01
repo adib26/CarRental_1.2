@@ -29,7 +29,24 @@
   </header><!-- End Header -->
 
 
+<br><br><br><br><br><br>
 
+<div style="width: 450px;height: 100px ;background-color:#ffff ; margin-left: auto;
+  margin-right: auto;border-radius: 6px;text-align: center;box-shadow: 0 5px 26px 0 rgba(68, 88, 144, 0.14);" >
+  
+  <h2 style="vertical-align:middle;padding: 30px;color: #000000">Cars Rented:</h2>
+
+</div>
+
+<br><br><br><br><br><br>
+
+<div style="width: 450px;height: 100px;background-color:#ffff ;text-align: center;   margin-left: auto;
+  margin-right: auto; border-radius: 6px;text-align: center;box-shadow: 0 5px 26px 0 rgba(68, 88, 144, 0.14);" >
+  
+  <h2 style="vertical-align:middle;padding: 30px;color: #FF4A56">Total Earnings:</h2>
+
+</div>
+  <br><br><br><br><br><br>
 
 
   

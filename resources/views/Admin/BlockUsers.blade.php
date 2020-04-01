@@ -4,6 +4,8 @@
 
 @section('body')
 
+<style>
+  body{ background: url("assets/img/back.jpg")fixed;background-size: 100%;}  </style>
 
  <header id="header">
     <div class="container">
@@ -31,16 +33,16 @@
 
 
 
-<form class="container" style="height:530px;width:800px;margin-top:40px;background-image:url(assets/img/back.jpg);border-radius:20px" method="post" action="{{ url('block') }}">
+<form class="container" style="height:330px;width:700px;margin-top:150px;margin-bottom:180px;background-color:rgba(211,211,211,0.9);border-radius:20px" method="post" action="{{ url('block') }}">
   @csrf
 
       <div>
-         <label class="UserName" style="color:white;margin-top:100px;margin-left:230px;font-size:25px">User name</label>
+         <label class="UserName" style="color:black;margin-top:100px;margin-left:165px;font-size:25px">UserName</label>
          <input type="text" class="username" name="username" 
          style="border:1px solid;border-left:2px solid;border-right:2px solid;border-top:2px solid;margin-left:10px;height:25px">
       </div>
 
-      <div style="margin-top:60px;margin-left:300px">
+      <div style="margin-top:60px;margin-left:230px">
          <button class="btn btn-primary" style="height:40px;width:100px;margin-bottom:" name="submit" value="b">Block</button>
          <button class="btn btn-secondary" style="height:40px;width:100px;margin-left:px" name="submit" value="un">Unblock</button>  
 

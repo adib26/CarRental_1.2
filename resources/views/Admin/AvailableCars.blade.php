@@ -5,7 +5,39 @@
 @section('body')
 
 
+<style>
+  body{ background: url("assets/img/avca.jpg")fixed;background-size: 100%;}
 
+        .w {background: rgba(211,211,211,0.9);overflow: auto;margin: 40px 20px 10px 20px;}
+      .w img {height: 150px;width:220px; float: left;
+           padding: 10px}
+            .w h3{font-family: sans-serif ;color: #562D2D;font-size: 24px;float: left;padding-top:10px}  
+            .w button {float: right ;margin-right: 55px;height: 45px;width:100px;text-decoration: none;background: #BC0000;color: white ;}
+       /* .ul1{margin: 0;    
+    position: sticky;
+    top: 0;
+        padding: 0px;
+        background:#960000;
+        height: 10% ;
+        overflow: hidden;  }
+   .ul1   li{list-style-type:none;
+      float: left;}
+    .ul1  li button{text-decoration:none;
+      display: block;
+      color: lightgrey;
+      padding: 14px 98px;
+      text-align: center;
+      }*/
+     /* img{max-width: 100%;}
+      .q4{width:50px;height: 50px;margin-left: 5px; }
+  .ul1 li button:hover {color: white;
+    background-color:#7C0000;}*/
+
+  .w button:hover{text-decoration: none;background: #700007;color: white; padding: 10px ;}
+/*.q{text-align: center;color: #FFFFFF;margin-top: 50px;margin-bottom: 50px;font-size: 40px}
+*/
+.e{font-size: 15px}
+</style>
 
  <header id="header">
     <div class="container">
@@ -20,8 +52,8 @@
         <ul>
           <li class="active"><a href="{{ route('AdminHome') }}">Home</a></li>
           <li><a href="{{ route('BlockUsers') }}">Block user</a></li>
-          <li><a href="{{ route('AvailableCars') }}">Available Cars</a></li>
-          <li><a href="{{ route('AddCar') }}">Add Car</a></li>          
+          <li><a href="{{ route('AddCar') }}">Add Car</a></li>
+          <li><a href="{{ route('AvailableCars') }}">Available Cars</a></li>          
           <li><a href="{{ route('logout') }}">logout</a></li>
 
         </ul>
@@ -36,7 +68,36 @@
 
 
 
+<div class="w">    
 
+
+
+    <img src="" alt="Mountains">
+    
+    <h3>Car id:</h3>
+    <br><br>
+    <h3>Car State:</h3>
+    <br><br>
+    <h3>Renter id:</h3>
+    <button type="button">Remove</button>
+    
+</div>
+
+
+<div class="w">    
+
+
+
+    <img src="" alt="Mountains">
+    
+    <h3>Car id:</h3>
+    <br><br>
+    <h3>Car State:</h3>
+    <br><br>
+    <h3>Renter id:</h3>
+    <button type="button">Remove</button>
+    
+</div>
 
 
 
