@@ -122,38 +122,25 @@ class adminController extends Controller
         $car_table->save();
 
         $row = car_table::where([ ['specification','=',$request->specification ], ['name','=',$request->name]  ])->first();
-        $imageName = $row->id.'.'.$request->img->extension();  
+        $imageName = $row->id.'.'.'png';  
         $request->img->move(public_path('images'), $imageName);
 
         return redirect('AdminHome')->with('response','add successfully');
 
 
-        /**
-        Validator::make($car_data, [
-            'name' => ['required' ,'string' , 'max:100' , 'min:4'],
-            'renter' => ['required' , 'string' , 'max:100' , 'min:4' ],
-            'specification' => ['required'  ,'string' , 'max:100' , 'min:4'],
-            'price' => ['required' ,'string'],
-            'place' => ['required' , 'string' , 'max:100' , 'min:4' ],
-        ]);
-
-
-
-
-        return cars::create([
-            'name' => $car_data['name'],
-            'renter' => $car_data['renter'],
-            'specification' => $car_data['specification'],
-            'start' => $car_data['start'],
-            'end' => $car_data['end'],
-            'place' => $car_data['place'],
-            'state' => 0
-        ]);
-*/
+        //end of add_car
     }
-    public function destroy($id)
+
+
+
+    public function removeCar(Request $request)
     {
-        //
+        
+      $idd = $request->btn;
+      public_path(($request->bt).'png')->delete();
+      DB::table('car_table')->where('id', '=', $idd)->delete();
+      return $this->avaCar();
+
     }
 
     public function avaCar()

@@ -5,9 +5,10 @@
 @section('body')
 
 
+<body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top header-transparent">
+  <header id="header" class="fixed-top header-transparent"  >
     <div class="container">
 
       <div class="logo float-left">
@@ -19,7 +20,9 @@
       <nav class="nav-menu float-right d-none d-lg-block">
         <ul>
           <li class="active"><a href="{{ route('userhome') }}">Home</a></li>
-              <li><a href="{{ route('logout') }}">logout</a></li>
+          <li><a href="{{ route('userhome') }}">Rent A Car</a></li>
+          <li><a href="{{ route('userhome') }}">Your Cars</a></li>          
+          <li><a href="{{ route('logout') }}">logout</a></li>
               
 
 
@@ -30,29 +33,27 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex justify-cntent-center align-items-center">
+  <section id="herouser" class="d-flex justify-cntent-center align-items-center" >
     <div id="heroCarousel" class="container carousel carousel-fade" data-ride="carousel">
+
+{{
+$rr = Auth::user(),
+$un = $rr->username
+
+}}  
 
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animated fadeInDown" style="font-size: 32px">Are you looking for cheap Car rental deals in Egypt?<br>Search right here!</h2>
-          <p class="animated fadeInUp">Where you Can Rent Your Dream Car from us</p>
+          <h2 class="animated fadeInDown" style="font-size: 32px">Welcome Back {{$un}} !</h2>
+          <p class="animated fadeInUp">CARRENTALS Where you Can Rent Your Dream Car</p>
           <br>
           <br>
-          <h4 style="color: #fff" class="animated fadeInUp">Just Login or Register to start using our amazing services !!</h4>
+          
         </div>
       </div>
 
       <!-- Slide 2 -->
-      <div class="carousel-item">
-        <div class="carousel-container">
-          <h2 class="animated fadeInDown" style="font-size: 32px">Find your dream car and start driving it!!<br></h2>
-          <br>
-          <br>
-          <h4 style="color: #fff" class="animated fadeInUp">Just Login or Register to start using our amazing services !!</h4>
-        </div>
-      </div>
       <!-- Slide 3 -->
 <!--       <div class="carousel-item">
         <div class="carousel-container">
@@ -80,47 +81,7 @@
 
   <main id="main">
 
-    <!-- ======= Services Section ======= -->
-    <section class="services">
-      <div class="container">
 
-        <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon-box icon-box-pink">
-              <div class="icon"><img src="assets/img/sm_1.png" alt=""></div>
-              <h4 class="title">No Extra Charge</h4>
-              <p class="description">Rent Any Car you want without paying any extra charge in our site</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon-box icon-box-cyan">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4 class="title"><a href="">Full Insurance</a></h4>
-              <p class="description">rent Cars With Full warranty and insurance from our Site</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon-box icon-box-green">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4 class="title"><a href="">Best Prices</a></h4>
-              <p class="description">We offer the best prices in the Country and the Best delivery time</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon-box icon-box-blue">
-              <div class="icon"><i class="bx bx-world"></i></div>
-              <h4 class="title">All over Egypt</h4>
-              <p class="description">Our service is available all across Egypt</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
 
  
 
@@ -198,7 +159,7 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('home') }}">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('userhome') }}">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{{ route('services') }}">Services</a></li>              
               <li><i class="bx bx-chevron-right"></i> <a href="{{ route('aboutus') }}">About us</a></li>
             </ul>

@@ -12,7 +12,7 @@ class car_table extends Model
 
 protected $fillable = [
         
- 	'id' ,	'name' ,	'renterUsername' 	,'specification' ,	'start', 	'end', 	'price' ,	'carLocation' ,	'placeOfRecipt' ,	'state' 
+ 	'name' ,	'renterUsername' 	,'specification' ,	'start', 	'end', 	'price' ,	'carLocation' ,	'placeOfRecipt' ,	'state' 
     ];
 
 

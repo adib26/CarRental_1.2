@@ -11,9 +11,9 @@
         .w {background: rgba(211,211,211,0.9);overflow: auto;margin: 40px 20px 10px 20px;}
       .w img {height: 150px;width:220px; float: left;
            padding: 10px}
-            .w h3{font-family: sans-serif ;color: #562D2D;font-size: 24px;float: left;padding-top:10px}  
+            .w h3{font-family: sans-serif ;color: #562D2D;font-size: 24px;float: left;padding-top:10px}
             .w button {float: right ;margin-right: 55px;height: 45px;width:100px;text-decoration: none;background: #BC0000;color: white ;}
-       /* .ul1{margin: 0;    
+       /* .ul1{margin: 0;
     position: sticky;
     top: 0;
         padding: 0px;
@@ -50,9 +50,9 @@
 
       <nav class="nav-menu float-right d-none d-lg-block">
         <ul>
-          <li class="active"><a href="{{ route('AdminHome') }}">Home</a></li>
+          <li><a href="{{ route('AdminHome') }}">Home</a></li>
           <li><a href="{{ route('BlockUsers') }}">Block user</a></li>
-          <li><a href="{{ route('AvailableCars') }}">Available Cars</a></li> 
+          <li class="active"><a href="{{ route('AvailableCars') }}">Available Cars</a></li>
           <li><a href="{{ route('AddCar') }}">Add Car</a></li>
           <li><a href="{{ route('logout') }}">logout</a></li>
 
@@ -70,34 +70,43 @@ $carimg = Storage::url('');
 
 @endphp -->
 
-<div class="w">    
+<div class="w">
 
 
-    
-    <img src="" alt="Mountains">  
-    
-    <h3>Car Id:{{$car->id}}</h3>
+
+     <img src="{{ url('/images/'.$car->id.'.png' ) }}" alt="{{$car->id}}">
+ 
+
+    <h3 style="font-family: Arial">Car Id:{{$car->id}}</h3>
 
     @if($car->state == 0)
     <br><br>
-    <h3 >Car State: <h3 style="color: red"> Not Rented</h3> </h3>
-   
+    <h3 style="font-family: Arial">Car State: <h3 style="color: red"> Not Rented</h3> </h3>
+
 
     @else
 
     <br><br>
-    <h3 >Car State: <h3 style="color: green">Rented</h3> </h3>
+    <h3 style="font-family: Arial">Car State: <h3 style="color: green">Rented</h3> </h3>
     <br><br>
     <h3>Renter username: {{$car->renterUsername}}</h3>
 
     @endif
 
-    <button type="button">Remove</button>
+    <form method="POST" action="{{ url('removeCar') }}">
+      {{ csrf_field() }}
+    <button name="btn" value='{{$car->id}}'>Remove</button>
     
+    </form>
+
 </div>
 
 @endforeach
-    
+
+
+
+
+
   </main>
 
 
@@ -117,9 +126,10 @@ $carimg = Storage::url('');
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('home') }}">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('services') }}">Services</a></li>              
-              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('aboutus') }}">About us</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{{ route('AdminHome') }}">HomePage</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{{ route('BlockUsers') }}">BlockUsers</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{{ route('AvailableCars') }}">AvailableCars</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{{ route('AddCar') }}">AddCar</a></li>
             </ul>
           </div>
 
@@ -155,8 +165,8 @@ $carimg = Storage::url('');
       <div class="copyright">
         &copy; Copyright <strong><span>SW2</span></strong>. All Rights Reserved
       </div>
-   
-</div> 
+
+</div>
     </div>
   </footer><!-- End Footer -->
 
@@ -212,9 +222,9 @@ $carimg = Storage::url('');
             </form>
             <div>
              <button type="button" class="btn btn-primary mb-2 ">Block</button>
-             <button type="button" class="btn btn-secondary mb-2">Unblock</button>  
+             <button type="button" class="btn btn-secondary mb-2">Unblock</button>
             </div>
-       
+
 
           </div>
         </div>

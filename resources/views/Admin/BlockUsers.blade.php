@@ -38,13 +38,13 @@
 
       <div>
          <label class="UserName" style="color:black;margin-top:100px;margin-left:165px;font-size:25px">UserName</label>
-         <input type="text" class="username" name="username" 
+         <input type="text" class="username" name="username"
          style="border:1px solid;border-left:2px solid;border-right:2px solid;border-top:2px solid;margin-left:10px;height:25px">
       </div>
 
       <div style="margin-top:60px;margin-left:230px">
          <button class="btn btn-primary" style="height:40px;width:100px;margin-bottom:" name="submit" value="b">Block</button>
-         <button class="btn btn-secondary" style="height:40px;width:100px;margin-left:px" name="submit" value="un">Unblock</button>  
+         <button class="btn btn-secondary" style="height:40px;width:100px;margin-left:px" name="submit" value="un">Unblock</button>
 
 <br><br>
 <div class="wrap-input100" style="color: #fff">
@@ -60,7 +60,7 @@
 </div>
 
       </div>
-    
+
   </form>
 
 
@@ -77,9 +77,10 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('home') }}">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('services') }}">Services</a></li>              
-              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('aboutus') }}">About us</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{{ route('AdminHome') }}">HomePage</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{{ route('BlockUsers') }}">BlockUsers</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{{ route('AvailableCars') }}">AvailableCars</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{{ route('AddCar') }}">AddCar</a></li>
             </ul>
           </div>
 
@@ -115,8 +116,8 @@
       <div class="copyright">
         &copy; Copyright <strong><span>SW2</span></strong>. All Rights Reserved
       </div>
-   
-</div> 
+
+</div>
     </div>
   </footer><!-- End Footer -->
 
@@ -172,9 +173,9 @@
             </form>
             <div>
              <button type="button" class="btn btn-primary mb-2 ">Block</button>
-             <button type="button" class="btn btn-secondary mb-2">Unblock</button>  
+             <button type="button" class="btn btn-secondary mb-2">Unblock</button>
             </div>
-       
+
 
           </div>
         </div>

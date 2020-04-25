@@ -70,7 +70,7 @@
         <form  class="login100-form validate-form" method="post" action="{{ url('add_car') }}" enctype="multipart/form-data">
         {{ csrf_field() }}
           <!--  <h3>Offer cars</h3>  -->
-  
+
             <div class="form-wrapper">
               <label for="">Car name</label>
               <input type="text" name="name" class="form-control" value="{{old('name')}}">
@@ -78,7 +78,7 @@
             <div class="form-wrapper">
               <label for="">Car specification</label>
               <input type="text" name="specification" class="form-control" value="{{old('specification')}}">
-          
+
           </div>
 
           <div class="form-wrapper">
@@ -97,17 +97,17 @@
                 <option value="South Sinai">South Sinai</option>
 
               </select>
-          
+
           </div>
-          
+
           <div class="form-wrapper">
             <label for="">Car photo</label>
               <input type="file" name="img">
-    
+
           </div>
-        
+
           <div class="form-group">
-            
+
             <div class="form-wrapper">
               <label for="">Start day</label>
               <input type="date"name="start" class="form-control" value="{{old('start')}}">
@@ -116,12 +116,12 @@
               <label for="">End day</label>
               <input type="date" name="end" class="form-control" value="{{old('end')}}">
             </div>
-          
+
           </div>
             <div class="form-group">
-            
-          
-          
+
+
+
           </div>
         <div class="form-wrapper">
             <label for="">Price per day</label>
@@ -147,8 +147,8 @@
              {{@session('success')}}
       </div>
 @endif
-        
-          
+
+
         </form>
         </div>
       </div>
@@ -167,9 +167,10 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('home') }}">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('services') }}">Services</a></li>              
-              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('aboutus') }}">About us</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{{ route('AdminHome') }}">HomePage</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{{ route('BlockUsers') }}">BlockUsers</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{{ route('AvailableCars') }}">AvailableCars</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{{ route('AddCar') }}">AddCar</a></li>
             </ul>
           </div>
 
@@ -205,8 +206,8 @@
       <div class="copyright">
         &copy; Copyright <strong><span>SW2</span></strong>. All Rights Reserved
       </div>
-   
-</div> 
+
+</div>
 <!--    </div>
  -->  </footer><!-- End Footer -->
 
@@ -261,9 +262,9 @@
             </form>
             <div>
              <button type="button" class="btn btn-primary mb-2 ">Block</button>
-             <button type="button" class="btn btn-secondary mb-2">Unblock</button>  
+             <button type="button" class="btn btn-secondary mb-2">Unblock</button>
             </div>
-       
+
 
           </div>
         </div>

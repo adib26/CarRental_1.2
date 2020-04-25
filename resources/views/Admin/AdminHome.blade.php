@@ -5,7 +5,7 @@
 @section('body')
 
 <body background="assets\img\admin_1.jpg">
- <header id="header">
+ <header id="header" class="fixed-top header-transparent">
     <div class="container">
 
       <div class="logo float-left">
@@ -18,7 +18,7 @@
         <ul>
           <li class="active"><a href="{{ route('AdminHome') }}">Home</a></li>
           <li><a href="{{ route('BlockUsers') }}">Block user</a></li>
-          <li><a href="{{ route('AvailableCars') }}">Available Cars</a></li>          
+          <li><a href="{{ route('AvailableCars') }}">Available Cars</a></li>
           <li><a href="{{ route('AddCar') }}">Add Car</a></li>
           <li><a href="{{ route('logout') }}">logout</a></li>
 
@@ -33,7 +33,7 @@
 
 <div style="width: 450px;height: 100px ;background-color:#ffff ; margin-left: auto;
   margin-right: auto;border-radius: 6px;text-align: center;box-shadow: 0 5px 26px 0 rgba(68, 88, 144, 0.14);" >
-  
+
   <h2 style="vertical-align:middle;padding: 30px;color: #000000">Cars Rented:</h2>
 
 </div>
@@ -42,14 +42,14 @@
 
 <div style="width: 450px;height: 100px;background-color:#ffff ;text-align: center;   margin-left: auto;
   margin-right: auto; border-radius: 6px;text-align: center;box-shadow: 0 5px 26px 0 rgba(68, 88, 144, 0.14);" >
-  
+
   <h2 style="vertical-align:middle;padding: 30px;color: #FF4A56">Total Earnings:</h2>
 
 </div>
   <br><br><br><br><br><br>
 
 
-  
+
   </main>
 
 
@@ -66,9 +66,10 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('home') }}">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('services') }}">Services</a></li>              
-              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('aboutus') }}">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('AdminHome') }}">HomePage</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('BlockUsers') }}">BlockUsers</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('AvailableCars') }}">AvailableCars</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{{ route('AddCar') }}">AddCar</a></li>
             </ul>
           </div>
 
@@ -104,8 +105,8 @@
       <div class="copyright">
         &copy; Copyright <strong><span>SW2</span></strong>. All Rights Reserved
       </div>
-   
-</div> 
+
+</div>
     </div>
   </footer><!-- End Footer -->
 
@@ -161,9 +162,9 @@
             </form>
             <div>
              <button type="button" class="btn btn-primary mb-2 ">Block</button>
-             <button type="button" class="btn btn-secondary mb-2">Unblock</button>  
+             <button type="button" class="btn btn-secondary mb-2">Unblock</button>
             </div>
-       
+
 
           </div>
         </div>

@@ -48,6 +48,7 @@ Route::get('/AddCar', function () {return view('Admin/AddCar');})->name('AddCar'
 Route::get('/AvailableCars', 'adminController@avaCar')->name('AvailableCars');
 Route::post('/block', 'adminController@blockUser');
 Route::post('/add_car', 'adminController@add_car');
+Route::post('/removeCar', 'adminController@removeCar')->name('removeCar');
 Route::resource('car_table','adminController');
 
 

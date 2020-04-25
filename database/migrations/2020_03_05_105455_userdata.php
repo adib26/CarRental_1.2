@@ -19,7 +19,7 @@ class Userdata extends Migration
             $table->text('username');
             $table->text('email');
             $table->text('password');
-            $table->integer('phone');
+            $table->text('phone');
             $table->boolean('state')->default(false);
         });
 
