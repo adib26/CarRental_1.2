@@ -55,6 +55,8 @@ Route::resource('car_table','adminController');
 
 // User....
 Route::get('/userhome', function () {return view('user/userhome');})->name('userhome');
+Route::get('/rentAcar', function () {return view('user/SearchForAcar');})->name('rentAcar');
+
 
 
 Auth::routes();

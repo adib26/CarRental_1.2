@@ -1,14 +1,34 @@
 @extends('layouts.siteST')
 
-@section('title','Home')
+@section('title','RentACar')
 
 @section('body')
 
+<style>
 
-<body>
+
+
+
+  body{background: url("assets/img/search.jpg")fixed;background-size: 100%;margin: 0; }
+
+select{margin-top: 5px;margin-left: 26px;border-radius: 5px;border: none;padding: 5px 8px;font-size: 15px}
+
+.h3{ text-align: center;color:#E2E2E2; margin-bottom: 5px}
+
+form{margin: 0px auto;}
+ fieldset{border-radius: 15px;background: #303030;padding: 20px;margin: 0px auto;width: 450px ;    border: none;margin-bottom: 20px}
+ input{color: #160042;margin-bottom: 15px;margin-top:5px;margin-left: 5px;border-radius: 5px;border: none;padding: 5px 8px;font-size: 15px}
+ label{color: #FFFFFF;margin-right:  5px; }
+
+
+.b{margin: 0 auto;margin-top: 15px;margin-left: 165px;border-radius: 10px; }
+.z{margin: 0 auto;height: 300px }
+
+</style>
+
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top header-transparent"  >
+  <header id="header" class="fixed-top header-transparent">
     <div class="container">
 
       <div class="logo float-left">
@@ -19,71 +39,63 @@
 
       <nav class="nav-menu float-right d-none d-lg-block">
         <ul>
-          <li class="active"><a href="{{ route('userhome') }}">Home</a></li>
-          <li><a href="{{ route('rentAcar') }}">Rent A Car</a></li>
+          <li><a href="{{ route('userhome') }}">Home</a></li>
+          <li class="active"><a href="{{ route('rentAcar') }}">Rent A Car</a></li>
           <li><a href="{{ route('userhome') }}">Your Cars</a></li>          
           <li><a href="{{ route('logout') }}">logout</a></li>
-              
-
-
         </ul>
       </nav><!-- .nav-menu -->
 
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="herouser" class="d-flex justify-cntent-center align-items-center" >
-    <div id="heroCarousel" class="container carousel carousel-fade" data-ride="carousel">
-
-{{
-$rr = Auth::user(),
-$un = $rr->username
-
-}}  
-
-      <!-- Slide 1 -->
-      <div class="carousel-item active">
-        <div class="carousel-container">
-          <h2 class="animated fadeInDown" style="font-size: 32px">Welcome Back {{$un}} !</h2>
-          <p class="animated fadeInUp">CARRENTALS Where you Can Rent Your Dream Car</p>
-          <br>
-          <br>
-          
-        </div>
-      </div>
-
-      <!-- Slide 2 -->
-      <!-- Slide 3 -->
-<!--       <div class="carousel-item">
-        <div class="carousel-container">
-          <h2 class="animated fadeInDown" style="font-size: 32px">Do You Want to buy A Brand New Car?</h2>
-          <p class="animated fadeInUp">We Have A great Collection of Cars with the Best price in the Country!!</p>
-                    <br>
-          <br>
-          <h4 style="color: #fff" class="animated fadeInUp">Just Login or Register to start using our amazing services !!</h4>
-
-        </div>
-      </div>
- -->
-      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-
-      <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-
-    </div>
-  </section><!-- End Hero -->
 
   <main id="main">
+ 
 
 
+<br><br><br><br><br>
 
  
+<form>
+<fieldset>
+
+<br>
+ <div class="z">
+<label>Location</label>
+              <select name="location" value="{{old('loc')}}">
+                <option value="Cairo">Cairo</option>
+                <option value="Alexandria">Alexandria</option>
+                <option value="Aswan">Aswan</option>
+                <option value="Giza">Giza</option>
+                <option value="Beheira">Beheira</option>
+                <option value="Dakahlia">Dakahlia</option>
+                <option value="Faiyum">Faiyum</option>
+                <option value="Luxor">Luxor</option>
+                <option value="Minya">Minya</option>
+                <option value="Monufia">Monufia</option>
+                <option value="South Sinai">South Sinai</option>
+
+              </select>
+<br> <br> 
+
+      <div class="form-group">
+            
+            <div class="form-wrapper">
+              <label for="">Pick up date </label>
+              <input type="date"name="start" class="form-control">
+            </div>
+            <div class="form-wrapper">
+              <label for="" >Return date&nbsp;  </label>
+              <input type="date" name="end" class="form-control">
+
+                </div>
+          </div>
+
+<button class="b"  name="submit" value="search">Search</button>
+</fieldset>
+</form>
+    </div>
 
         
 <!--
@@ -159,7 +171,7 @@ $un = $rr->username
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('userhome') }}">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('home') }}">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{{ route('services') }}">Services</a></li>              
               <li><i class="bx bx-chevron-right"></i> <a href="{{ route('aboutus') }}">About us</a></li>
             </ul>
@@ -203,9 +215,16 @@ $un = $rr->username
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Adib</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>SW2</span></strong>. All Rights Reserved
       </div>
+      <!-- <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/ -->
 
+<!--         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+ -->      
 </div> 
     </div>
   </footer><!-- End Footer -->
