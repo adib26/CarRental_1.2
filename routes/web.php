@@ -55,8 +55,9 @@ Route::resource('car_table','adminController');
 
 // User....
 Route::get('/userhome', function () {return view('user/userhome');})->name('userhome');
-Route::get('/rentAcar', function () {return view('user/SearchForAcar');})->name('rentAcar');
-
+//Route::get('/rentAcar', function () {return view('user/SearchForAcar');})->name('rentAcar');
+//Route::resource('user/SearchForAcar', 'DataRangeController');
+Route::get('/rentAcar', 'DataRangeController@rentCar')->name('rentAcar');
 
 
 Auth::routes();

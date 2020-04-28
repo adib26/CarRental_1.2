@@ -143,6 +143,8 @@ class adminController extends Controller
 
     }
 
+
+
     public function avaCar()
     {
         $car_table = DB::select('select * from car_table');

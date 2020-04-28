@@ -24,8 +24,26 @@ form{margin: 0px auto;}
 .b{margin: 0 auto;margin-top: 15px;margin-left: 165px;border-radius: 10px; }
 .z{margin: 0 auto;height: 300px }
 
+  .w {background: rgba(211,211,211,0.9);overflow: auto;margin: 40px 20px 10px 20px;}
+  .w img {height: 150px;width:220px; float: left;
+      padding: 10px}
+  .w h3{font-family: sans-serif ;color: #562D2D;font-size: 24px;float: left;padding-top:10px}
+  .w button {float: right ;margin-right: 55px;height: 45px;width:100px;text-decoration: none;background: #BC0000;color: white ;}
+
+  .w button:hover{text-decoration: none;background: #700007;color: white; padding: 10px ;}
+
+  .e{font-size: 15px}
 </style>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
+</head>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top header-transparent">
@@ -51,111 +69,78 @@ form{margin: 0px auto;}
 
 
   <main id="main">
- 
 
 
-<br><br><br><br><br>
 
- 
-<form>
-<fieldset>
-
-<br>
- <div class="z">
-<label>Location</label>
-              <select name="location" value="{{old('loc')}}">
-                <option value="Cairo">Cairo</option>
-                <option value="Alexandria">Alexandria</option>
-                <option value="Aswan">Aswan</option>
-                <option value="Giza">Giza</option>
-                <option value="Beheira">Beheira</option>
-                <option value="Dakahlia">Dakahlia</option>
-                <option value="Faiyum">Faiyum</option>
-                <option value="Luxor">Luxor</option>
-                <option value="Minya">Minya</option>
-                <option value="Monufia">Monufia</option>
-                <option value="South Sinai">South Sinai</option>
-
+      <body>
+      <div class="container">
+          <br />
+          <br />
+          <br />
+          <div class="row input-daterange">
+              <div class="col-md-3">
+                  <input type="date" name="from_date" id="from_date" class="form-control" placeholder="From Date"  />
+              </div>
+              <div class="col-md-3">
+                  <input type="date" name="to_date" id="to_date" class="form-control" placeholder="To Date"  />
+              </div>
+              <div class="col-md-0">
+              <select name="location" value="{{old('loc')}}" class="form-control">
+                  <option value="Cairo">Cairo</option>
+                  <option value="Alexandria">Alexandria</option>
+                  <option value="Aswan">Aswan</option>
+                  <option value="Giza">Giza</option>
+                  <option value="Beheira">Beheira</option>
+                  <option value="Dakahlia">Dakahlia</option>
+                  <option value="Faiyum">Faiyum</option>
+                  <option value="Luxor">Luxor</option>
+                  <option value="Minya">Minya</option>
+                  <option value="Monufia">Monufia</option>
+                  <option value="South Sinai">South Sinai</option>
               </select>
-<br> <br> 
+              </div>
+              <form method="POST" class="col-md-4" action="{{ url('filterCar') }}">
+                  {{ csrf_field() }}
+                  <button type="button" name="filter" id="filter" class="btn btn-primary">Filter</button>
 
-      <div class="form-group">
-            
-            <div class="form-wrapper">
-              <label for="">Pick up date </label>
-              <input type="date"name="start" class="form-control">
-            </div>
-            <div class="form-wrapper">
-              <label for="" >Return date&nbsp;  </label>
-              <input type="date" name="end" class="form-control">
+              </form>
 
-                </div>
           </div>
-
-<button class="b"  name="submit" value="search">Search</button>
-</fieldset>
-</form>
-    </div>
-
-        
-<!--
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row" data-aos="fade-up">
-          <div class="col-md-5">
-            <img src="assets/img/bac_2.jpg" class="img-fluid" alt="" style="height: 280px">
-          </div>
-          <div class="col-md-7 pt-4">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-            <p class="font-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <ul>
-              <li><i class="icofont-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="icofont-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row" data-aos="fade-up">
-          <div class="col-md-5 order-1 order-md-2">
-            <img src="assets/img/jeep_2.jpg" class="img-fluid" alt="" style="height: 280px">
-          </div>
-          <div class="col-md-7 pt-5 order-2 order-md-1">
-            <h3>Corporis temporibus maiores provident</h3>
-            <p class="font-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
-          </div>
-        </div>
-
-        <div class="row" data-aos="fade-up">
-          <div class="col-md-5">
-            <img src="assets/img/bac_1.png" class="img-fluid" alt="" style="height: 280px">
-          </div>
-          <div class="col-md-7 pt-5">
-            <h3>Sunt consequatur ad ut est nulla consectetur reiciendis animi voluptas</h3>
-            <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p>
-            <ul>
-              <li><i class="icofont-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="icofont-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="icofont-check"></i> Facilis ut et voluptatem aperiam. Autem soluta ad fugiat.</li>
-            </ul>
-          </div>
-        </div>
-
+          <br />
 
       </div>
-    </section> End Features Section 
-  -->
+      </body>
+
+
+
+  @foreach($car_table as $car)
+
+      @php
+
+          $carimg = Storage::url('');
+
+      @endphp -->
+
+          <div class="w">
+
+
+
+              <img src="{{ url('/images/'.$car->id.'.png' ) }}" alt="{{$car->id}}">
+
+
+              <h3 style="font-family: Arial">{{$car->name}}</h3>
+              <h3 style="font-family: Arial">{{$car->price}}$</h3>
+              <h3 style="font-family: Arial">:{{$car->start}}</h3>
+              <h3 style="font-family: Arial">{{$car->end}}</h3>
+              <h3 style="font-family: Arial">{{$car->carLocation}}</h3>
+              <h3 style="font-family: Arial">{{$car->placeOfRecipt}}</h3>
+
+
+
+          </div>
+
+      @endforeach
+
 
 
   </main>
@@ -246,8 +231,14 @@ form{margin: 0px auto;}
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <!-- scripts of filter -->
+
+
 </body>
 
+
 </html>
+
+
 
 @endsection
