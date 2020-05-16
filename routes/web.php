@@ -47,17 +47,16 @@ Route::get('/AdminHome', function () {return view('Admin/AdminHome');})->name('A
 Route::get('/AddCar', function () {return view('Admin/AddCar');})->name('AddCar');
 Route::get('/AvailableCars', 'adminController@avaCar')->name('AvailableCars');
 Route::post('/block', 'adminController@blockUser');
-Route::post('/add_car', 'adminController@add_car');
+Route::post('/add_car', 'adminController@add_car')->name('add_car');
 Route::post('/removeCar', 'adminController@removeCar')->name('removeCar');
 Route::resource('car_table','adminController');
 
 
 
 // User....
-Route::get('/userhome', function () {return view('user/userhome');})->name('userhome');
-//Route::get('/rentAcar', function () {return view('user/SearchForAcar');})->name('rentAcar');
-//Route::resource('user/SearchForAcar', 'DataRangeController');
-Route::get('/rentAcar', 'DataRangeController@rentCar')->name('rentAcar');
+Route::get('/userhome', function () {return view('user/userhome');})->name('userhome')->middleware(['auth.user']);
+Route::post('/rentAcar', 'DataRangeController@filterCar')->name('rentAcar');
+Route::get('/rentAcar', 'DataRangeController@filterCar')->name('rentAcar')->middleware(['auth.user']);
 
 
 Auth::routes();

@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\File; 
 
 class adminController extends Controller
 {
@@ -110,7 +111,7 @@ class adminController extends Controller
             'start'=> ['required'],
             'end'=> ['required'],
         ]);
-     $car_table = new car_table;
+/*     $car_table = new car_table;
     
         $car_table->name = $request->input('name');
         $car_table->specification = $request->input('specification');
@@ -119,7 +120,11 @@ class adminController extends Controller
         $car_table->start = $request->input('start');
         $car_table->end = $request->input('end');
         $car_table->carLocation = $request->input('loc');
-        $car_table->save();
+        $car_table->save();*/
+
+        DB::table('car_table')->insert(
+    ['name' => $request->input('name'), 'specification' => $request->input('specification') , 'price' => $request->input('price'), 'placeOfRecipt'=> $request->input('place') , 'start'=> $request->input('start') , 'end'=> $request->input('end') , 'carLocation'=> $request->input('loc') ]
+	);
 
         $row = car_table::where([ ['specification','=',$request->specification ], ['name','=',$request->name]  ])->first();
         $imageName = $row->id.'.'.'png';  
@@ -137,7 +142,7 @@ class adminController extends Controller
     {
         
       $idd = $request->btn;
-      public_path(($request->bt).'png')->delete();
+      File::delete('images/'.$request->btn.'.png');
       DB::table('car_table')->where('id', '=', $idd)->delete();
       return $this->avaCar();
 

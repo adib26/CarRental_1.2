@@ -13,8 +13,8 @@
 
 select{margin-top: 5px;margin-left: 26px;border-radius: 5px;border: none;padding: 5px 8px;font-size: 15px}
 
-.h3{ text-align: center;color:#E2E2E2; margin-bottom: 5px}
-
+.h3{ color:#E2E2E2; margin-bottom: 5px;}
+img {height: 250px;width:320px;float: left;}
 form{margin: 0px auto;}
  fieldset{border-radius: 15px;background: #303030;padding: 20px;margin: 0px auto;width: 450px ;    border: none;margin-bottom: 20px}
  input{color: #160042;margin-bottom: 15px;margin-top:5px;margin-left: 5px;border-radius: 5px;border: none;padding: 5px 8px;font-size: 15px}
@@ -25,9 +25,9 @@ form{margin: 0px auto;}
 .z{margin: 0 auto;height: 300px }
 
   .w {background: rgba(211,211,211,0.9);overflow: auto;margin: 40px 20px 10px 20px;}
-  .w img {height: 150px;width:220px; float: left;
+  .w img {height: 250px;width:320px; float: left;
       padding: 10px}
-  .w h3{font-family: sans-serif ;color: #562D2D;font-size: 24px;float: left;padding-top:10px}
+  .w h3{font-family: sans-serif ;color: #562D2D;font-size: 24px;padding-top:5px}
   .w button {float: right ;margin-right: 55px;height: 45px;width:100px;text-decoration: none;background: #BC0000;color: white ;}
 
   .w button:hover{text-decoration: none;background: #700007;color: white; padding: 10px ;}
@@ -73,19 +73,21 @@ form{margin: 0px auto;}
 
 
       <body>
+        <form method="Post" action="{{ url('rentAcar') }}">
       <div class="container">
           <br />
           <br />
           <br />
           <div class="row input-daterange">
               <div class="col-md-3">
-                  <input type="date" name="from_date" id="from_date" class="form-control" placeholder="From Date"  />
+
+                  <input type="date" name="from_date" value="{{old('from_date')}}" class="form-control" />
               </div>
               <div class="col-md-3">
-                  <input type="date" name="to_date" id="to_date" class="form-control" placeholder="To Date"  />
+                  <input type="date" name="to_date" value="{{old('to_date')}}" class="form-control" />
               </div>
               <div class="col-md-0">
-              <select name="location" value="{{old('loc')}}" class="form-control">
+              <select name="location" value="{{old('location')}}" class="form-control">
                   <option value="Cairo">Cairo</option>
                   <option value="Alexandria">Alexandria</option>
                   <option value="Aswan">Aswan</option>
@@ -99,49 +101,47 @@ form{margin: 0px auto;}
                   <option value="South Sinai">South Sinai</option>
               </select>
               </div>
-              <form method="POST" class="col-md-4" action="{{ url('filterCar') }}">
+              
                   {{ csrf_field() }}
-                  <button type="button" name="filter" id="filter" class="btn btn-primary">Filter</button>
+                  <button name="filter" class="btn btn-primary">Filter</button>
 
-              </form>
+              
 
           </div>
           <br />
 
       </div>
+      </form>
       </body>
 
 
 
-  @foreach($car_table as $car)
-
-      @php
-
-          $carimg = Storage::url('');
-
-      @endphp -->
-
-          <div class="w">
 
 
+  @foreach($carz as $car)
 
-              <img src="{{ url('/images/'.$car->id.'.png' ) }}" alt="{{$car->id}}">
+
+        <div class="w">
 
 
-              <h3 style="font-family: Arial">{{$car->name}}</h3>
-              <h3 style="font-family: Arial">{{$car->price}}$</h3>
-              <h3 style="font-family: Arial">:{{$car->start}}</h3>
-              <h3 style="font-family: Arial">{{$car->end}}</h3>
-              <h3 style="font-family: Arial">{{$car->carLocation}}</h3>
-              <h3 style="font-family: Arial">{{$car->placeOfRecipt}}</h3>
+              <img src="{{ url('/images/'.$car->id.'.png' ) }}">
+
+              <h3 style="font-family: Arial">Car Name: {{$car->name}}</h3>
+              
+              <h3 style="font-family: Arial">Car price per day: {{$car->price}}$</h3>
+             
+<!--               <h3 style="font-family: Arial">Start day of renting: {{$car->start}}</h3>
+              <h3 style="font-family: Arial">End day of renting: {{$car->end}}</h3>
+ -->             
+              <h3 style="font-family: Arial">Car Location: {{$car->carLocation}}</h3>
+            
+              <h3 style="font-family: Arial">PlaceOfRecipt: {{$car->placeOfRecipt}}</h3>
 
 
 
           </div>
 
       @endforeach
-
-
 
   </main>
 

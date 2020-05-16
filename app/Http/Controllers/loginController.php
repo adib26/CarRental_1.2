@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Validator;
 use Auth;
+use App\Admin;
+use DB;
 class loginController extends Controller
 {
     function index()
@@ -29,9 +31,11 @@ class loginController extends Controller
         );
 
 
-        if($request->get('email') == "admin@gmail.com" && $request->get('password') == '1234' ){
 
-            $request->session()->regenerate();         
+        if(DB::table('Admins')->where([ ['email', '=', $request->get('email')], ['password', '=', $request->get('password')]])->count() > 0  ){
+            
+            $request->session()->regenerate(); 
+                   
             return redirect('AdminHome');
         }
 
