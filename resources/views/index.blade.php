@@ -27,7 +27,6 @@
                 </ul>
               </li>
 
-
           <li><a href="{{ route('aboutus') }}">About Us</a></li>
         </ul>
       </nav><!-- .nav-menu -->

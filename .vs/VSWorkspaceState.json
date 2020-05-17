@@ -1,11 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public",
-    "\\public\\assets",
-    "\\public\\assets\\img",
-    "\\resources\\views"
+    "\\app\\Http\\Controllers",
+    "\\resources",
+    "\\resources\\views",
+    "\\resources\\views\\user",
+    "\\routes"
   ],
-  "SelectedNode": "\\public\\assets\\img\\Car.jpg",
+  "SelectedNode": "\\resources\\views\\user\\userhome.blade.php",
   "PreviewInSolutionExplorer": false
 }

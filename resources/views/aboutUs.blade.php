@@ -25,7 +25,6 @@
                 </ul>
               </li>
 
-
           <li class="active"><a href="{{ route('aboutus') }}">About Us</a></li>
         </ul>
       </nav><!-- .nav-menu -->
