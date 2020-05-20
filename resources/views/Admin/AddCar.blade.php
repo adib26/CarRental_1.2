@@ -37,6 +37,12 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
+<style>
+
+
+  body{background: url("assets/img/1.jpg")fixed;background-size: 100%;margin: 0; }
+
+</style>
 
 <body>
 
