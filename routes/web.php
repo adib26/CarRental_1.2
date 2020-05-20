@@ -57,6 +57,7 @@ Route::resource('car_table','adminController');
 Route::get('/userhome', function () {return view('user/userhome');})->name('userhome')->middleware(['auth.user']);
 Route::post('/rentAcar', 'DataRangeController@filterCar')->name('rentAcar');
 Route::get('/rentAcar', 'DataRangeController@filterCar')->name('rentAcar')->middleware(['auth.user']);
+Route::get('/yourdata', function () {return view('user/viewdata');})->name('yourdata')->middleware(['auth.user']);
 
 
 Auth::routes();

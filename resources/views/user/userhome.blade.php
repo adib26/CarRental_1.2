@@ -21,7 +21,7 @@
         <ul>
           <li class="active"><a href="{{ route('userhome') }}">Home</a></li>
           <li><a href="{{ route('rentAcar') }}">Rent A Car</a></li>
-          <li><a href="{{ route('userhome') }}">Your Cars</a></li>          
+          <li><a href="{{ route('yourdata') }}">Your Data</a></li>          
           <li><a href="{{ route('logout') }}">logout</a></li>
               
 
