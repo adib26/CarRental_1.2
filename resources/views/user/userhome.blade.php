@@ -36,11 +36,12 @@
   <section id="herouser" class="d-flex justify-cntent-center align-items-center" >
     <div id="heroCarousel" class="container carousel carousel-fade" data-ride="carousel">
 
-{{
-$rr = Auth::user(),
-$un = $rr->username
-
-}}  
+        <script>
+            {{
+             $rr = Auth::user(),
+             $un = $rr->username
+             }}
+        </script>
 
       <!-- Slide 1 -->
       <div class="carousel-item active">

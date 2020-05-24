@@ -7,7 +7,7 @@
 <style>
 
 
-  body{background: url("assets/img/viewdata.jpg")fixed;background-size: 100%;margin: 0; }
+  body{background: url("assets/img/viewdata.jpeg")fixed;background-size: 100%;margin: 0; }
 
  fieldset{border-radius: 15px;background: #2B1B1B;padding: 20px;margin: 0px auto;width: 600px ;    border: none;margin-bottom: 20px;margin-top:80px}
  label{color: #FFFFFF; font-size: large;}
@@ -49,15 +49,23 @@
 
   <main id="main">
 
+      <script>
+          {{
+                   $rr = Auth::user(),
+                   $un = $rr->username,
+                   $email = $rr->email,
+                   $phone = $rr->phone
+                   }}
+      </script>
 
 
  <fieldset style="margin-top: 150px">
   <legend>User Information</legend>
-<label > UserName :</label>  <!-- here back end --> <br><br>
+<label > UserName : {{$un}}</label>  <!-- here back end --> <br><br>
 
-<label >E-mail :</label> <!-- here back end -->  <br><br>
+<label >E-mail : {{$email}}</label> <!-- here back end -->  <br><br>
 
-<label >Phone :</label>  <!-- here back end -->  <br><br>
+<label >Phone : {{$phone}}</label>  <!-- here back end -->  <br><br>
 
 
 
